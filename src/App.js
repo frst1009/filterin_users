@@ -1,18 +1,14 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import {Home} from "../src/pages/Home";
-import {Users} from "../src/pages/Users";
-import {UsersPosts} from "./pages/UsersPosts";
-
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './pageInfo/Home';
 
 
 function App() {
   return (
+    <BrowserRouter>
    <Routes>
      <Route path="/" element={<Home />} />
-     <Route path="/users" element={<Users />} />
-     <Route path="/UsersPosts/:id" element={<UsersPosts/>} />
    </Routes>
+   </BrowserRouter>
   );
 }
 
